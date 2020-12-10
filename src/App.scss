@@ -1,0 +1,164 @@
+.App {
+  width: 100%;
+  height: 100vh;
+  max-height: 1200px;
+  overflow-y: auto;
+  display: flex;
+
+  &.p0 {
+    background-color: #00a0b2;
+  }
+
+  &.p1 {
+    background-blend-mode: screen;
+    background: #00a0b2 url(./bg.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  &.p2 {
+    background-blend-mode: darken;
+    background: #fff701 url(./bg2.png);
+    // background-position: center;
+    background-size: cover;
+    // background-attachment: fixed;
+  }
+
+  .Menu {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(217, 255, 0, 0.384);
+    margin: 5px;
+    border: 1px solid #fff8;
+    border-radius: 2px 2px;
+    box-shadow: 2px 2px 5px #0008;
+
+    button {
+      margin: 2px;
+      border: 1px solid #000;
+      background-color: rgb(217, 255, 0);
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(186, 214, 24);
+      }
+
+      &:active {
+        color: white;
+        background-color: rgb(110, 124, 30);
+      }
+    }
+  }
+
+  .Main {
+    flex-grow: 1;
+    margin: 5px;
+    margin: 5px;
+    border: 1px solid #fff8;
+    border-radius: 2px 2px;
+    box-shadow: 2px 2px 5px #0008;
+    display: flex;
+    flex-direction: column;
+
+    &.p1 {
+      background: #ffffff57;
+    }
+    &.p2 {
+      color: white;
+      background: #00000044;
+    }
+
+    .Description {
+      margin-bottom: 30px;
+    }
+
+    .ButtonGroup {
+      border-radius: 5px 5px;
+      background-color: rgba(240, 248, 255, 0);
+      display: flex;
+      flex-wrap: wrap;
+      margin: 5px 10px;
+      button {
+        border: 1px solid #000;
+        cursor: pointer;
+        background-color: rgb(217, 255, 0);
+        &:hover {
+          background-color: rgb(186, 214, 24);
+        }
+        &:active {
+          color: white;
+          background-color: rgb(110, 124, 30);
+        }
+      }
+      button:nth-child(1) {
+        flex-grow: 2;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      button:nth-child(2) {
+        flex-grow: 1;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+
+    .Controller {
+      border-radius: 5px 5px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 5px 10px;
+      input {
+        flex-grow: 1;
+        border-radius: 5px 5px;
+        border: 1px solid #000;
+      }
+    }
+
+    .List {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      margin: 10px;
+      border: 1px solid #fff8;
+      box-shadow: 2px 2px 5px #0008;
+      background-color: rgba(240, 248, 255, 0.671);
+      padding: 2px 0;
+      border-radius: 5px 5px;
+
+      .Item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-bottom: 1px dashed gray;
+
+        .Label {
+          margin-left: 5px;
+          font-weight: bold;
+          width: 200px;
+        }
+        input {
+          width: 300px;
+        }
+        .Brief {
+          margin: 0 5px;
+          font-size: small;
+          flex-grow: 1;
+          white-space: nowrap;
+        }
+
+        &:nth-child(even) {
+          background-color: #0002;
+        }
+
+        &:hover {
+          background-color: rgba(217, 255, 0, 0.384);
+        }
+      }
+    }
+  }
+}
