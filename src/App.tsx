@@ -11,7 +11,16 @@ function App() {
         <button>App 3</button>
         <button>App 4</button>
       </div>
-      <div className="Main p1">
+      <div className="Main p0">
+        <div className="Context">
+          <div className="Left"></div>
+          <div className="Center">App1</div>
+          <div className="Right">
+            <button>🔴</button>
+            <button>🟡</button>
+            <button>🟢</button>
+          </div>
+        </div>
         <div className="Description">
           <h2>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
@@ -49,7 +58,15 @@ function App() {
               return (
                 <div key={x + i.toString()} className="Item">
                   <div className="Label">{x}</div>
-                  <input type="text" />
+                  {i % 2 ? (
+                    <input type="text" />
+                  ) : (
+                    <select>
+                      <option value="a">A</option>
+                      <option value="b">B</option>
+                      <option value="c">C</option>
+                    </select>
+                  )}
                   <div className="Brief">
                     {i}: Lorem ipsum dolor adipisci quo autem vero magni
                   </div>
